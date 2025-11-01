@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="free calzone, calzone delivery, college food, pizza delivery, D.P. Dough, calzone coupon">
+    <link rel="canonical" href="https://www.dpdough.com/">
+    <title>D.P. Dough - FREE Calzone + $5 Off | Limited Time Offer</title>
+    <meta name="description" content="Get a FREE Calzone + $5 Off Your First Order! Join 100,000+ calzone lovers getting exclusive deals & early access. Limited time offer.">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Mailchimp CSS (minimal styling conflicts) -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --dp-red: #D32F2F;
+            --dp-dark: #1a1a1a;
+            --dp-gray: #2a2a2a;
+            --dp-light: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+            background: url('https://www.dpdough.com/img/zone-home-bg.webp') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--dp-dark);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--dp-red);
+            transform: scale(1.05);
+        }
+
+        .order-btn {
+            background: var(--dp-red);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .order-btn:hover {
+            background: #b71c1c;
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dp-gray) 0%, var(--dp-dark) 100%);
+            padding: 3rem 5% 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(211, 47, 47, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-logo {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 1.5rem;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            border: 4px solid var(--dp-red);
+        }
+
+        .hero-logo img {
+            width: 85%;
+            height: 85%;
+            object-fit: contain;
+        }
+
+        .hero h1 {
+            font-family: 'Alfa Slab One', cursive;
+            font-size: clamp(1.75rem, 4.5vw, 3rem);
+            color: white;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-tagline {
+            font-size: clamp(0.9rem, 2.2vw, 1.25rem);
+            color: #ffa726;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero-cta {
+            background: var(--dp-red);
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(211, 47, 47, 0.4);
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(211, 47, 47, 0.6);
+        }
+
+        .hero-cta:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 10px rgba(211, 47, 47, 0.4);
+        }
+
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--dp-red);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 10000;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* Value Prop Section */
+        .value-prop {
+            background: var(--dp-light);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .value-prop h2 {
+            font-family: 'Alfa Slab One', cursive;
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            color: var(--dp-red);
+            margin-bottom: 1rem;
+        }
+
+        .value-prop-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 1.5rem;
+            max-width: 500px;
+            margin: 0 auto 2rem;
+        }
+
+        .ingredient-icon {
+            font-size: 3rem;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+        }
+
+        /* Lead Capture Section - THE STAR */
+        .lead-capture {
+            background: var(--dp-dark);
+            padding: 4rem 5%;
+            position: relative;
+        }
+
+        .lead-capture::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--dp-red) 0%, #ff6b6b 50%, var(--dp-red) 100%);
+        }
+
+        .lead-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .lead-content h2 {
+            font-family: 'Alfa Slab One', cursive;
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            color: white;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .lead-content .subheadline {
+            font-size: 1.25rem;
+            color: #ffa726;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .benefits-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .benefit-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            color: white;
+            font-weight: 700;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+
+        .benefit-item:hover {
+            border-color: var(--dp-red);
+            background: rgba(211, 47, 47, 0.1);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+        }
+
+        .benefit-item:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(211, 47, 47, 0.1);
+        }
+
+        /* Mailchimp Form Styling */
+        #mc_embed_signup {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 1.75rem;
+            max-width: 480px;
+            margin: 1.5rem auto 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        #mc_embed_signup form {
+            padding: 0 !important;
+        }
+
+        #mc_embed_signup h2 {
+            font-size: 1.25rem !important;
+            font-weight: 900 !important;
+            color: var(--dp-dark) !important;
+            margin-bottom: 1.25rem !important;
+            text-align: center;
+        }
+
+        #mc_embed_signup .mc-field-group {
+            margin-bottom: 1rem;
+            width: 100% !important;
+        }
+
+        #mc_embed_signup label {
+            font-weight: 700;
+            color: var(--dp-dark);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        #mc_embed_signup input[type="email"],
+        #mc_embed_signup input[type="text"],
+        #mc_embed_signup input[type="tel"] {
+            width: 100% !important;
+            padding: 0.875rem;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        #mc_embed_signup input:focus {
+            border-color: var(--dp-red);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+        }
+
+        #mc_embed_signup .button {
+            background: var(--dp-red) !important;
+            color: white !important;
+            padding: 1rem 2.5rem !important;
+            font-size: 1rem !important;
+            font-weight: 900 !important;
+            text-transform: uppercase !important;
+            border: none !important;
+            border-radius: 50px !important;
+            cursor: pointer !important;
+            letter-spacing: 2px !important;
+            transition: all 0.3s !important;
+            width: 100% !important;
+            margin-top: 0.75rem !important;
+        }
+
+        #mc_embed_signup .button:hover {
+            background: #b71c1c !important;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 15px rgba(211, 47, 47, 0.4);
+        }
+
+        #mc_embed_signup .button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(211, 47, 47, 0.3);
+        }
+
+        #mc_embed_signup .indicates-required {
+            text-align: right;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        #mc_embed_signup .asterisk {
+            color: var(--dp-red);
+        }
+
+        .privacy-note {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            margin-top: 0.75rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .urgency-banner {
+            background: linear-gradient(90deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 900;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 1rem auto;
+            max-width: 400px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .privacy-note a {
+            color: #ffa726;
+            text-decoration: none;
+        }
+
+        /* What is a Calzone Section */
+        .calzone-def {
+            background: var(--dp-dark);
+            color: white;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .calzone-def h2 {
+            font-family: 'Alfa Slab One', cursive;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .definition-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+            border-left: 4px solid var(--dp-red);
+        }
+
+        .phonetic {
+            font-size: 1.1rem;
+            color: #999;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .definition-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        /* Social Proof */
+        .social-proof {
+            background: white;
+            padding: 2.5rem 5%;
+            text-align: center;
+        }
+
+        .social-proof h3 {
+            font-family: 'Alfa Slab One', cursive;
+            font-size: 2rem;
+            color: var(--dp-red);
+            margin-bottom: 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            padding: 2rem;
+            background: var(--dp-light);
+            border-radius: 12px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--dp-red);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dp-dark);
+            color: white;
+            padding: 2.5rem 5% 1.5rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--dp-red);
+            transform: scale(1.05);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            font-size: 1.5rem;
+        }
+
+        .social-icons a {
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--dp-red);
+            transform: scale(1.1);
+        }
+
+        .copyright {
+            color: #999;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 2.5rem 5% 1.5rem;
+            }
+
+            .hero-logo {
+                width: 140px;
+                height: 140px;
+                margin: 0 auto 1rem;
+            }
+
+            #mc_embed_signup {
+                padding: 1.25rem;
+                max-width: 100%;
+            }
+
+            .benefits-list {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+            }
+
+            .benefit-item {
+                width: 100%;
+                max-width: 300px;
+                font-size: 0.85rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .urgency-banner {
+                font-size: 0.8rem;
+                padding: 0.5rem 1rem;
+                max-width: 100%;
+                margin: 0.75rem auto;
+            }
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Focus indicators */
+        a:focus, button:focus, input:focus, textarea:focus {
+            outline: 2px solid var(--dp-red);
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .benefit-item {
+                border: 2px solid white;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section transitions */
+        section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered animation delays */
+        .hero { animation-delay: 0.2s; }
+        .value-prop { animation-delay: 0.4s; }
+        .lead-capture { animation-delay: 0.6s; }
+        .calzone-def { animation-delay: 0.8s; }
+        .social-proof { animation-delay: 1.0s; }
+        .footer { animation-delay: 1.2s; }
+
+        /* Performance optimizations */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', { // Replace with your GA4 ID
+            'custom_map': {'custom_parameter_1': 'page_location'}
+        });
+        
+        // Track scroll depth
+        let scrollTracked = {25: false, 50: false, 75: false, 100: false};
+        window.addEventListener('scroll', function() {
+            let scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+            Object.keys(scrollTracked).forEach(depth => {
+                if (scrollPercent >= depth && !scrollTracked[depth]) {
+                    gtag('event', 'scroll', {
+                        'event_category': 'engagement',
+                        'event_label': depth + '%',
+                        'value': depth
+                    });
+                    scrollTracked[depth] = true;
+                }
+            });
+        });
+
+        // Track form field interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('mc-embedded-subscribe-form');
+            const inputs = form.querySelectorAll('input[type="email"], input[type="text"], input[type="tel"]');
+
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    gtag('event', 'form_field_focus', {
+                        'event_category': 'form_interaction',
+                        'event_label': this.name
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation">
+        <div class="logo">D.P. DOUGH®</div>
+        <nav class="nav-links" role="navigation">
+            <a href="#menu">MENU</a>
+            <a href="#locations">LOCATIONS</a>
+            <a href="#signup" class="order-btn">JOIN US</a>
+        </nav>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home" role="banner">
+        <div class="hero-content">
+            <div class="hero-logo" aria-label="D.P. Dough Logo">
+                <img src="https://www.dpdough.com/img/logo_dpdough.png" alt="D.P. Dough Logo" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <h1>The Official Calzone of College®</h1>
+            <p class="hero-tagline">Fresh-baked perfection. Delivered to your door.</p>
+            <a href="#signup" class="hero-cta" id="hero-cta-btn">GET EXCLUSIVE OFFERS</a>
+        </div>
+    </section>
+
+    <!-- Value Prop -->
+    <section class="value-prop">
+        <h2>Choose Your Perfect Calzone</h2>
+        <p class="value-prop-subtitle">Over 30 fresh ingredients stuffed inside our legendary original dough recipe</p>
+        <div class="ingredients-grid">
+            <div class="ingredient-icon">🍕</div>
+            <div class="ingredient-icon">🧀</div>
+            <div class="ingredient-icon">🍄</div>
+            <div class="ingredient-icon">🥓</div>
+            <div class="ingredient-icon">🌶️</div>
+            <div class="ingredient-icon">🍅</div>
+        </div>
+    </section>
+
+    <!-- Lead Capture Section -->
+    <section class="lead-capture" id="signup" role="main" id="main-content">
+        <div class="lead-content">
+            <h2>Get Your FREE Calzone + $5 Off</h2>
+            <p class="subheadline">Join 100,000+ calzone lovers getting exclusive deals & early access</p>
+            
+            <div class="benefits-list">
+                <div class="benefit-item">🎉 FREE Calzone on Signup</div>
+                <div class="benefit-item">💰 $5 Off Your First Order</div>
+                <div class="benefit-item">📱 Text Alerts for Deals</div>
+                <div class="benefit-item">🎂 Birthday Freebies</div>
+            </div>
+
+            <div class="urgency-banner">
+                <p>⚡ Limited Time: FREE Calzone Offer Ends Soon!</p>
+            </div>
+
+            <!-- Mailchimp Embedded Form -->
+            <div id="mc_embed_signup">
+                <form action="YOUR_MAILCHIMP_ACTION_URL" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <h2>Claim Your FREE Calzone + $5 Off</h2>
+                        
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required aria-required="true" placeholder="your@email.com">
+                        </div>
+                        
+                        <div class="mc-field-group">
+                            <label for="mce-FNAME">First Name</label>
+                            <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="First Name">
+                        </div>
+
+                        <div class="mc-field-group">
+                            <label for="mce-MMERGE6">ZIP Code</label>
+                            <input type="text" value="" name="MMERGE6" class="" id="mce-MMERGE6" placeholder="Enter your ZIP">
+                        </div>
+
+                        <div class="mc-field-group">
+                            <label for="mce-PHONE">Phone Number</label>
+                            <input type="tel" value="" name="PHONE" class="" id="mce-PHONE" placeholder="(555) 123-4567">
+                        </div>
+
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>
+                        
+                        <!-- Real people should not fill this in -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_YOUR_BOT_FIELD" tabindex="-1" value="">
+                        </div>
+                        
+                        <div class="clear">
+                            <input type="submit" value="GET MY FREE CALZONE" name="subscribe" id="mc-embedded-subscribe" class="button">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <p class="privacy-note">
+                We respect your privacy. Unsubscribe anytime. GDPR compliant.
+                <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- What is a Calzone -->
+    <section class="calzone-def" id="about" role="complementary">
+        <h2>What is a<br>CALZONE?</h2>
+        <div class="definition-box">
+            <p class="phonetic">/kalˈzōnā, kalˈtsōnā, kalˈzōn/</p>
+            <p class="definition-text">
+                <strong>noun</strong><br>
+                A type of pizza made with your favorite ingredients and our original dough recipe, folded and fresh baked to order.
+            </p>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof" role="complementary">
+        <h3>We are The Calzone King™!</h3>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">35+</div>
+                <div class="stat-label">Years Serving Students</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Campus Locations</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1M+</div>
+                <div class="stat-label">Calzones Sold Yearly</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-logo">D.P. DOUGH®</div>
+        <nav class="footer-links" role="navigation">
+            <a href="#menu">Menu</a>
+            <a href="#locations">Locations</a>
+            <a href="#franchise">Franchise</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#privacy">Privacy Policy</a>
+        </nav>
+        <div class="social-icons">
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Facebook">👤</a>
+            <a href="#" aria-label="YouTube">📺</a>
+        </div>
+        <p class="copyright">© 2025 D.P. Dough. All rights reserved.</p>
+    </footer>
+
+    <!-- Form Conversion Tracking -->
+    <script>
+        document.getElementById('mc-embedded-subscribe-form').addEventListener('submit', function(e) {
+            gtag('event', 'generate_lead', {
+                'event_category': 'form',
+                'event_label': 'email_signup',
+                'value': 1
+            });
+
+            // Track form completion
+            gtag('event', 'form_submit', {
+                'event_category': 'conversion',
+                'event_label': 'lead_capture_form'
+            });
+        });
+
+        // Track CTA clicks
+        document.getElementById('hero-cta-btn').addEventListener('click', function() {
+            gtag('event', 'click', {
+                'event_category': 'cta',
+                'event_label': 'hero_get_offers'
+            });
+        });
+    </script>
+
+    <!-- Section animation script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+    <!-- Mailchimp validation script -->
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script type='text/javascript'>
+        (function($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0]='EMAIL';
+            ftypes[0]='email';
+            fnames[1]='FNAME';
+            ftypes[1]='text';
+            fnames[6]='MMERGE6';
+            ftypes[6]='zip';
+            fnames[2]='PHONE';
+            ftypes[2]='phone';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+    </script>
+</body>
+</html>
